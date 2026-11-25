@@ -1,4 +1,4 @@
-# sglang CI runner kit
+# SGLang CI runner kit
 
 [中文版](README.zh-CN.md)
 
@@ -16,6 +16,7 @@ This repo is everything a vendor needs:
 | `examples/systemd/` | a systemd unit and env files for both modes |
 | `keys/<vendor>/<kid>.pub` | the registered public key of each vendor host |
 | `vendors/<vendor>/submitters.txt` | GitHub accounts allowed to submit keys for that vendor |
+| `docs/design.md` | how the broker and the runners fit together, and why |
 
 ## How it works
 
@@ -32,6 +33,7 @@ This repo is everything a vendor needs:
 The broker decides what each key may do: its labels, its host name, how many
 runners its host may have at once, its rate, and when it expires. sglang can
 narrow these for a single key. Nothing in your request or token can widen them.
+[docs/design.md](docs/design.md) explains the design.
 
 ## Rules for your setup
 

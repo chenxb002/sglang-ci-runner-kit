@@ -1,4 +1,4 @@
-# sglang CI runner kit
+# SGLang CI runner kit
 
 [English](README.md)
 
@@ -15,6 +15,7 @@ job，机器向 sglang 的 runner 签发服务（broker）申请一份**即时�
 | `examples/systemd/` | 两种模式的 systemd unit 和 env 文件示例 |
 | `keys/<vendor>/<kid>.pub` | 已登记的各厂商主机公钥 |
 | `vendors/<vendor>/submitters.txt` | 可以替该厂商提交公钥的 GitHub 账号 |
+| `docs/design.md` | broker 和 runner 如何配合，以及为什么这样设计（英文） |
 
 ## 工作方式
 
@@ -27,6 +28,7 @@ job，机器向 sglang 的 runner 签发服务（broker）申请一份**即时�
 
 每把 key 能做什么由 broker 决定：labels、主机名、这台主机同时能有多少个 runner、限流、何时过期。
 sglang 可以对某一把 key 单独收紧。请求或 token 里的任何内容都无法放宽。
+设计说明见 [docs/design.md](docs/design.md)（英文）。
 
 ## 部署要求
 
